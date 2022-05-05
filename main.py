@@ -74,10 +74,9 @@ def get_products(soup):
     return products_data
 
 
+if __name__ == "__main__":
+    soup = fetch_page('monitor cleaning kit')
+    data = get_products(soup)
 
-soup = fetch_page('monitor cleaning kit')
-print("==================================")
-data = get_products(soup)
-
-df = pd.DataFrame(data)
-df.to_excel("monitor_cleaning_kit.xlsx")
+    df = pd.DataFrame(data)
+    df.to_excel("monitor_cleaning_kit.xlsx")
